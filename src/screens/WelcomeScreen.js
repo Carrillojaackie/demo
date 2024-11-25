@@ -5,22 +5,19 @@ const WelcomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome Screen</Text>
-      
-      <TouchableOpacity onPress={() => navigation.push('Details')}>
-        <Text style={styles.textLink}>Go to Details... again</Text>
-      </TouchableOpacity>
 
       <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-        <Text style={styles.textLink}>Go to Home</Text>
+        <Text style={styles.textLink}>Go Home</Text>
+      </TouchableOpacity>
+      
+      <TouchableOpacity onPress={() => navigation.navigate('Details')}>
+        <Text style={styles.textLink}>Go to Details</Text>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={() => navigation.goBack()}>
         <Text style={styles.textLink}>Go back</Text>
       </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => navigation.popToTop()}>
-        <Text style={styles.textLink}>Go back to first screen in stack</Text>
-      </TouchableOpacity>
+      
     </View>
   );
 };
@@ -45,6 +42,7 @@ const styles = StyleSheet.create({
 });
 
 export default WelcomeScreen;
+
 
 
 
